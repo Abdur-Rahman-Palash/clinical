@@ -301,7 +301,8 @@ export default function HomeContent() {
                             marginBottom: '2.5rem',
                         }}
                     >
-                        {focusAreas.map(({ name, href, emoji }) => (
+                        {focusAreas.length > 0 ? (
+                            focusAreas.map(({ name, href, emoji }) => (
                             <Link
                                 key={name}
                                 href={href}
@@ -353,7 +354,11 @@ export default function HomeContent() {
                                     Learn more <ArrowRight size={12} />
                                 </span>
                             </Link>
-                        ))}
+                        )) ) : (
+                            <p style={{ gridColumn: '1/-1', textAlign: 'center', color: 'var(--text-secondary)' }}>
+                                Loading focus areas...
+                            </p>
+                        )}
                     </div>
 
                     <div style={{ textAlign: 'center' }}>
