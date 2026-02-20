@@ -67,18 +67,18 @@ const testimonials = [
 export default function HomeContent() {
     useEffect(() => {
         const ctx = gsap.context(() => {
-            // Stagger focus area cards
-            gsap.from('.focus-card', {
-                opacity: 0,
-                y: 40,
-                duration: 0.6,
-                stagger: 0.1,
-                ease: 'power3.out',
-                scrollTrigger: {
-                    trigger: '.focus-grid',
-                    start: 'top 80%',
-                },
-            });
+            // Stagger focus area cards - temporarily disabled
+            // gsap.from('.focus-card', {
+            //     opacity: 0,
+            //     y: 40,
+            //     duration: 0.6,
+            //     stagger: 0.1,
+            //     ease: 'power3.out',
+            //     scrollTrigger: {
+            //         trigger: '.focus-grid',
+            //         start: 'top 80%',
+            //     },
+            // });
 
             // How therapy helps section
             gsap.from('.therapy-col', {
@@ -301,8 +301,7 @@ export default function HomeContent() {
                             marginBottom: '2.5rem',
                         }}
                     >
-                        {focusAreas.length > 0 ? (
-                            focusAreas.map(({ name, href, emoji }) => (
+                        {focusAreas.map(({ name, href, emoji }) => (
                             <Link
                                 key={name}
                                 href={href}
@@ -354,11 +353,7 @@ export default function HomeContent() {
                                     Learn more <ArrowRight size={12} />
                                 </span>
                             </Link>
-                        )) ) : (
-                            <p style={{ gridColumn: '1/-1', textAlign: 'center', color: 'var(--text-secondary)' }}>
-                                Loading focus areas...
-                            </p>
-                        )}
+                        ))}
                     </div>
 
                     <div style={{ textAlign: 'center' }}>

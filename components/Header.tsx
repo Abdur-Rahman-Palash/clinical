@@ -117,13 +117,13 @@ export default function Header() {
                             </Link>
                         ))}
                         <Link
-                            href="/contact"
+                            href="/booking"
                             className="btn-primary"
                             style={{ marginLeft: '0.75rem', padding: '0.625rem 1.5rem', fontSize: '0.875rem' }}
-                            aria-label="Book a consultation"
+                            aria-label="Book appointment"
                         >
                             <Phone size={15} />
-                            Book a Consultation
+                            Book Appointment
                         </Link>
                     </nav>
 
@@ -200,9 +200,9 @@ export default function Header() {
                             transition={{ delay: 0.3 }}
                             style={{ marginTop: '1.25rem' }}
                         >
-                            <Link href="/contact" className="btn-primary" style={{ width: '100%', justifyContent: 'center' }}>
+                            <Link href="/booking" className="btn-primary" style={{ width: '100%', justifyContent: 'center' }}>
                                 <Phone size={16} />
-                                Book a Consultation
+                                Book Appointment
                             </Link>
                         </motion.div>
                     </motion.div>
